@@ -15,7 +15,16 @@ public class EncapsulationDemo {
      */
 
     public static void main(String[] args) {
-
+    	Car car = new Car(14.0, 10.0, "Red", 28);
+    	SUV suv = new SUV(16.0, 10.0, "Red", 24, 7);
+    	car.drive();
+    	suv.drive();
+    	suv.offroad();
+    	car.setFuelInTank(0.0);
+    	car.drive();
+    	car.setFuelInTank(1.0);
+    	car.drive();
+    	car.drive();
     }
 
 }
@@ -92,7 +101,7 @@ class Car {
 
     public void setFuelInTank(double fuelInTank) {
 
-        if (fuelInTank > 0 && fuelInTank <= tankCapacity) {
+        if (fuelInTank >= 0 && fuelInTank <= tankCapacity) {
 
             this.fuelInTank = fuelInTank;
 
@@ -162,7 +171,7 @@ class SUV extends Car {
 
     }
 
-    private void offroad() {
+    protected void offroad() {
 
         drive();
 

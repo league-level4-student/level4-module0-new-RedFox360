@@ -30,7 +30,7 @@ public class EnumDemo {
 
         MERCURY(88), VENUS(225), EARTH(365), MARS(687), JUPITER(4333),
         SATURN(10759), URANUS(30687), NEPTUNE(60190);
-
+    	
         private final int daysToOrbitSun;
 
         /*
@@ -49,85 +49,100 @@ public class EnumDemo {
 
     }
 
+    enum Fruits {
+    	APPLE("red"), ORANGE("orange"), BANANA("yellow"), POMEGRANATE("red"), PASSIONFRUIT("red, green, yellow"), LEMON("yellow"), CUCUMBER("green"), TOMATO("red");
+    	private String color;
+    	private Fruits(String color) {
+    		this.color = color;
+    	}
+    }
     public static void main(String[] args) {
-
-        // A single enum value can be can be used to initialize a variable.
-
-        Planets planet = Planets.MERCURY;
-
-        // enums be used for if statement comparisons.
-
-        if (planet == Planets.MERCURY) {
-
-            System.out.println(planet + " takes " + planet.getDaysToOrbitSun()
-                    + " days to orbit the sun!");
-
-        }
-
-        /*
-         * The .values() method returns every unique entry of an enum as an
-         * array.
-         */
-
-        Planets[] planets = Planets.values();
-
-        
-        /*
-         * The planet variable can then be set to any random value in planets
-         * through the following method.
-         */
-        
-        Random random = new Random();
-
-        planet = planets[random.nextInt(planets.length)];
-
-        // Then used in a switch statement.
-
-        switch (planet) {
-
-        /*
-         * Notice that the name of the enum's type is not required for the cases
-         * in the switch statement.
-         */
-
-        case MERCURY: {
-            System.out.println("Mercury has no moons!");
-            break;
-        }
-        case VENUS: {
-            System.out.println("Venus has no moons!");
-            break;
-        }
-        case EARTH: {
-            System.out.println("Earth has 1 moon!");
-            break;
-        }
-        case MARS: {
-            System.out.println("Mars has 2 moons!");
-            break;
-        }
-        case JUPITER: {
-            System.out.println("Jupiter has 79 moons!");
-            break;
-        }
-        case SATURN: {
-            System.out.println("Saturn has 62 moons!");
-            break;
-        }
-        case URANUS: {
-            System.out.println("Uranus has 27 moons!");
-            break;
-        }
-        case NEPTUNE: {
-            System.out.println("Neptune has 14 moons!");
-            break;
-        }
-
-        }
-
-        StatesOfMatter[] states = StatesOfMatter.values();
-        
-        enumDemoMethod(states[random.nextInt(states.length)]);
+    	Fruits fruit = Fruits.APPLE;
+    	System.out.println(fruit.color);
+    	Random random = new Random();
+    	Fruits[] fruits = Fruits.values();
+    	
+    	Fruits randomFruit = fruits[random.nextInt(fruits.length)];
+    	
+    	System.out.println(randomFruit);
+    	System.out.println(randomFruit.color);
+//        // A single enum value can be can be used to initialize a variable.
+//
+//        Planets planet = Planets.MERCURY;
+//
+//        // enums be used for if statement comparisons.
+//
+//        if (planet == Planets.MERCURY) {
+//
+//            System.out.println(planet + " takes " + planet.getDaysToOrbitSun()
+//                    + " days to orbit the sun!");
+//
+//        }
+//
+//        /*
+//         * The .values() method returns every unique entry of an enum as an
+//         * array.
+//         */
+//
+//        Planets[] planets = Planets.values();
+//
+//        
+//        /*
+//         * The planet variable can then be set to any random value in planets
+//         * through the following method.
+//         */
+//        
+//        
+//
+//        planet = planets[random.nextInt(planets.length)];
+//
+//        // Then used in a switch statement.
+//
+//        switch (planet) {
+//
+//        /*
+//         * Notice that the name of the enum's type is not required for the cases
+//         * in the switch statement.
+//         */
+//
+//        case MERCURY: {
+//            System.out.println("Mercury has no moons!");
+//            break;
+//        }
+//        case VENUS: {
+//            System.out.println("Venus has no moons!");
+//            break;
+//        }
+//        case EARTH: {
+//            System.out.println("Earth has 1 moon!");
+//            break;
+//        }
+//        case MARS: {
+//            System.out.println("Mars has 2 moons!");
+//            break;
+//        }
+//        case JUPITER: {
+//            System.out.println("Jupiter has 79 moons!");
+//            break;
+//        }
+//        case SATURN: {
+//            System.out.println("Saturn has 62 moons!");
+//            break;
+//        }
+//        case URANUS: {
+//            System.out.println("Uranus has 27 moons!");
+//            break;
+//        }
+//        case NEPTUNE: {
+//            System.out.println("Neptune has 14 moons!");
+//            break;
+//        }
+//
+//        }
+//
+//        StatesOfMatter[] states = StatesOfMatter.values();
+//        
+//        enumDemoMethod(states[random.nextInt(states.length)]);
 
     }
 

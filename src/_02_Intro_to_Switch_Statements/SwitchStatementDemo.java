@@ -10,34 +10,31 @@ public class SwitchStatementDemo {
          * The following two blocks of code are logically the same.
          */
 
-        int x = new Random().nextInt(3);
-
-        if (x == 0) {
-            System.out.println("0 from if-else");
-        } else if (x == 1) {
-            System.out.println("1 from if-else");
-        } else if (x == 2) {
-            System.out.println("2 from if-else");
-        } else {
-            System.out.println("Something went wrong from if-else :(");
-        }
-
-        switch (x) {
-
-        case 0:
-            System.out.println("0 from switch");
-            break;
-        case 1:
-            System.out.println("1 from switch");
-            break;
-        case 2:
-            System.out.println("2 from switch");
-            break;
-        default:
-            System.out.println("Something went wrong from switch :(");
-            break;
-
-        }
+//        int x = new Random().nextInt(3);
+//
+//        if (x == 0) {
+//            System.out.println("0 from if-else");
+//        } else if (x == 1) {
+//            System.out.println("1 from if-else");
+//        } else if (x == 2) {
+//            System.out.println("2 from if-else");
+//        } else {
+//            System.out.println("Something went wrong from if-else :(");
+//        }
+//
+//        switch (x) {
+//
+//        case 0:
+//            System.out.println("0 from switch");
+//        case 1:
+//            System.out.println("1 from switch");
+//        case 2:
+//            System.out.println("2 from switch");
+//        default:
+//            System.out.println("Something went wrong from switch :(");
+//           
+//
+//        }
 
         /*
          * 1. Try running the program a few times and follow the results in the
@@ -73,5 +70,14 @@ public class SwitchStatementDemo {
          * This fall through property could potentially be useful if you want
          * multiple results to occur from a single comparison.
          */
+    	String x = "ANGRY";
+    	switch(x.toLowerCase()) {
+    	case "hello":
+    		System.out.println("It says hello");
+    		break;
+    	default:
+    		System.out.println("It didn't greet me :(");
+    		break;
+    	}
     }
 }
