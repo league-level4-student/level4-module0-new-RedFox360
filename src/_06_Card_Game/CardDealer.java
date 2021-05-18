@@ -40,10 +40,4 @@ public class CardDealer {
     	return cards;
     }
 	
-	public Card pop() {
-		return deck.remove(deck.size() - 1);
-	}
-	
-	
-
 }
